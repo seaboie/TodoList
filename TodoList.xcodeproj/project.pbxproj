@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		481DB1212783048200A96F7C /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DB1202783048200A96F7C /* TodoListApp.swift */; };
-		481DB1232783048200A96F7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DB1222783048200A96F7C /* ContentView.swift */; };
 		481DB1252783048500A96F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481DB1242783048500A96F7C /* Assets.xcassets */; };
 		481DB1282783048500A96F7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481DB1272783048500A96F7C /* Preview Assets.xcassets */; };
 		481DB130278305B500A96F7C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DB12F278305B500A96F7C /* ListView.swift */; };
 		481DB13227830AE000A96F7C /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DB13127830AE000A96F7C /* ListRowView.swift */; };
 		481DB134278310E500A96F7C /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DB133278310E500A96F7C /* AddView.swift */; };
+		481DB1382783217600A96F7C /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DB1372783217600A96F7C /* ItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		481DB11D2783048200A96F7C /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481DB1202783048200A96F7C /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
-		481DB1222783048200A96F7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		481DB1242783048500A96F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		481DB1272783048500A96F7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		481DB12F278305B500A96F7C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		481DB13127830AE000A96F7C /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		481DB133278310E500A96F7C /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		481DB1372783217600A96F7C /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				481DB1202783048200A96F7C /* TodoListApp.swift */,
-				481DB1222783048200A96F7C /* ContentView.swift */,
+				481DB135278320FF00A96F7C /* Models */,
 				481DB12E278305A600A96F7C /* Views */,
+				481DB1362783211800A96F7C /* ViewModels */,
 				481DB1242783048500A96F7C /* Assets.xcassets */,
 				481DB1262783048500A96F7C /* Preview Content */,
 			);
@@ -82,6 +83,21 @@
 				481DB133278310E500A96F7C /* AddView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		481DB135278320FF00A96F7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				481DB1372783217600A96F7C /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		481DB1362783211800A96F7C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481DB1232783048200A96F7C /* ContentView.swift in Sources */,
+				481DB1382783217600A96F7C /* ItemModel.swift in Sources */,
 				481DB1212783048200A96F7C /* TodoListApp.swift in Sources */,
 				481DB134278310E500A96F7C /* AddView.swift in Sources */,
 				481DB130278305B500A96F7C /* ListView.swift in Sources */,
