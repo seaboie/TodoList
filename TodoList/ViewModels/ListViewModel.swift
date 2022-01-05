@@ -13,8 +13,7 @@ class ListViewModel: ObservableObject {
     @Published var items: [ItemModel] = []
     
     @Published var showAlert: Bool = false
-    
-//    @Environment(.\presentationMode) var presentationMode
+  
     
     init () {
         getItems()
@@ -60,6 +59,11 @@ class ListViewModel: ObservableObject {
     }
     
     
-    
+    func updateItem(currentItem: ItemModel) {
+        
+        if let index = items.firstIndex(where: { $0.id == currentItem.id}) {
+            items[index] = currentItem.updateCompletion()
+        }
+    }
     
 }
