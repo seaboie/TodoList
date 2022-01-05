@@ -9,13 +9,18 @@ import SwiftUI
 
 struct AddView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    @EnvironmentObject var listViewModel: ListViewModel
+    
     @State private var textFieldText: String = ""
+   
     
     var body: some View {
         
         ScrollView {
             
-            VStack() {
+            VStack {
                 
                 TextField("Type something here ...", text: $textFieldText)
                     .padding(.horizontal)
@@ -23,8 +28,14 @@ struct AddView: View {
                     .background(Color.black.opacity(0.1))
                     .cornerRadius(12)
                 
+                
                 Button {
-                    //
+
+                    if listViewModel.hasLessThanThreeCharacters(textFieldText: textFieldText) {
+                        listViewModel.addItem(title: textFieldText)
+                        presentationMode.wrappedValue.dismiss()
+                    
+                    }
                 } label: {
                     Text("save".uppercased())
                         .font(.headline)
@@ -35,14 +46,23 @@ struct AddView: View {
                         .cornerRadius(12)
                         .padding(.vertical)
                 }
-
-                
             }
             .padding()
                 
         }
         .navigationTitle("Add New Item ✒️")
+        .alert("You should have at least 3 characters 😀 🥺 😱", isPresented: $listViewModel.showAlert) {
+            Button(role: .cancel) {
+                //
+            } label: {
+                Text("ตกลง")
+            }
+
+        }
+
+
     }
+    
 }
 
 struct AddView_Previews: PreviewProvider {
@@ -50,5 +70,6 @@ struct AddView_Previews: PreviewProvider {
         NavigationView {
             AddView()
         }
+        .environmentObject(ListViewModel())
     }
 }
