@@ -18,6 +18,7 @@ struct TodoListApp: App {
                 ListView()
 //                NoItemsView()
             }
+            .navigationViewStyle(.stack)
             .environmentObject(listViewModel)
         }
     }

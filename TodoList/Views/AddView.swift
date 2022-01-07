@@ -25,7 +25,7 @@ struct AddView: View {
                 TextField("Type something here ...", text: $textFieldText)
                     .padding(.horizontal)
                     .frame(height: 50)
-                    .background(Color.black.opacity(0.1))
+                    .background(Color(.secondarySystemBackground))
                     .cornerRadius(12)
                 
                 
