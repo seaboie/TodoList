@@ -16,6 +16,7 @@ struct TodoListApp: App {
         WindowGroup {
             NavigationView {
                 ListView()
+//                NoItemsView()
             }
             .environmentObject(listViewModel)
         }
